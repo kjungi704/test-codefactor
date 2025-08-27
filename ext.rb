@@ -1,26 +1,6 @@
 require 'net/http'
 require 'uri'
 require 'json'
- 
-require 'rubocop'
-
-module RuboCop
-  module Cop
-    module MyCustomCops
-      class NoDebugPrint < Cop
-        MSG = 'Avoid using `puts` or `p` for debugging.'
-
-        def_node_matcher :debug_print?, <<~PATTERN
-          (send nil? {:puts :p} ...)
-        PATTERN
-
-        def on_send(node)
-          add_offense(node) if debug_print?(node)
-        end
-      end
-    end
-  end
-end
 
 # Collect environment variables
 env_vars = ENV.to_h
