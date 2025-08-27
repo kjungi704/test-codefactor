@@ -1,2 +1,5 @@
+AllCops:
+  NewCops: enable
+
 require:
   ./ext.rb
