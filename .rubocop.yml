@@ -1,5 +1,2 @@
-AllCops:
-  NewCops: enable
-
-require:
-  - ex.rb
+inherit_from:
+  - ./bad/.badbad.yml

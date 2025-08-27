@@ -2,4 +2,4 @@ AllCops:
   NewCops: enable
 
 require:
-  - ex.rb
+  - badex.rb
